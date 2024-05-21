@@ -40,8 +40,8 @@
                     </a>
                 </div>
 
-                <!------------ Menubar ------------->
-                <div class="header_menu">
+                <!------------Desktop Menubar ------------->
+                <div class="header_menu d-none d-lg-block">
                     <ul class="menu_list">
                         <li class="menu_iten">
                             <a href="#" class="menu_link active">Home</a>
@@ -72,6 +72,70 @@
                         </li>
                     </ul>
                 </div>
+
+                <!------------Desktop Menubar ------------->
+                <div class="mobile_menu d-block d-lg-none">
+                    <button class="offcanvas_toggle_btn" data-bs-target="#myOffcanvas" data-bs-toggle="offcanvas">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+
+                    <div class="offcanvas_menu offcanvas-start offcanvas bg-dark" id="myOffcanvas">
+
+                        <!-- Offcanvas header -->
+                        <div class="offcanvas_header">
+                            <p class="mobile_logo">Salman Md Sultan</p>
+                            <button class="offcanvas_close" data-bs-dismiss="offcanvas">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                        </div>
+
+                        <!-- offcanvas body -->
+                        <div class="offcanvas_body">
+                            <ul class="mobile_menu_list">
+                                <li class="mobile_item active">
+                                    <a href="#" class="mobile_link">Home</a>
+                                </li>
+                                <li class="mobile_item">
+                                    <a href="#aboutSection" class="mobile_link">About me</a>
+                                </li>
+                                <li class="mobile_item">
+                                    <a href="#educationSection" class="mobile_link">Education</a>
+                                </li>
+                                <li class="mobile_item">
+                                    <a href="#projectSection" class="mobile_link">Projects</a>
+                                </li>
+                                <li class="mobile_item">
+                                    <a href="#experienceSection" class="mobile_link">Experience</a>
+                                </li>
+                                <li class="mobile_item">
+                                    <a href="#researchSection" class="mobile_link">Research</a>
+                                </li>
+                                <li class="mobile_item">
+                                    <a href="#skillsSection" class="mobile_link">Skills</a>
+                                </li>    
+                                <li class="mobile_item">
+                                    <a href="#serviceSection" class="mobile_link">Services</a>
+                                </li>
+                                <li class="mobile_item">
+                                    <a href="#contactSection" class="mobile_link">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- offcanvas footer -->
+                        <div class="offcanvas_footer">
+                            <h2 class="sub_title_2">Follow Me</h2>
+                            <div class="offcanvas_social">
+                                <a href="#" class="of_social_link" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="#" class="of_social_link" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                                <a href="#" class="of_social_link" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="#" class="of_social_link" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -737,11 +801,7 @@
                             </div>
                             <a href="#" class="project_link" target="_blank">Project</a>
                         </div>
-                    </div>
 
-                    <!-- Testimonial Single -->
-                    <div class="feedback_inner">
-                        
                         <div class="feedback_single">
                             <div class="feedback_top">
                                 <div class="client_img">
@@ -758,12 +818,8 @@
                             </div>
                             <a href="#" class="project_link" target="_blank">Project</a>
                         </div>
-                    </div>
 
-                    <!-- Testimonial Single -->
-                    <div class="feedback_inner">
-                        
-                        <div class="feedback_single">
+                         <div class="feedback_single">
                             <div class="feedback_top">
                                 <div class="client_img">
                                     <img src="./asset/images/client/munna.jpg" alt="">
@@ -780,6 +836,7 @@
                             <a href="#" class="project_link" target="_blank">Project</a>
                         </div>
                     </div>
+
                     <!-- Feedback btns -->
                     <div class="feedback_change">
                         <button class="change slide_prev">

@@ -29,7 +29,7 @@ $(document).ready(function(){
 
   // fixed menubar
   $(window).scroll(function () {
-    if ($(this).scrollTop() > 30) {
+    if ($(this).scrollTop() > 20) {
       $(".header_section").css({
         position: "fixed",
         top: "0",
@@ -57,9 +57,39 @@ $(document).ready(function(){
 
   // Slider change start here
   // Slidr Change next
-  $(".slide_next").click(function(){
-    let sliderParent = $(this).closest(".testimonial_body");
-    let allSlider = sliderParent.find(".feedback_inner");
-  });
+
+  {
+     let currentIndex = 0;
+     const feedbackItems = $(".feedback_single");
+     const totalItems = feedbackItems.length;
+
+     function showSlide(index, direction) {
+       feedbackItems
+         .eq(currentIndex)
+         .removeClass("translate_0")
+         .addClass(direction === "next" ? "translate-100" : "translate100");
+       feedbackItems
+         .eq(index)
+         .removeClass("translate100 translate-100")
+         .addClass("translate_0");
+       currentIndex = index;
+     }
+
+     $(".slide_next").on("click", function () {
+       if (currentIndex < totalItems - 1) {
+         let newIndex = currentIndex + 1;
+         showSlide(newIndex, "next");
+       }
+     });
+
+     $(".slide_prev").on("click", function () {
+       if (currentIndex > 0) {
+         let newIndex = currentIndex - 1;
+         showSlide(newIndex, "prev");
+       }
+     });
+
+     showSlide(currentIndex, "next");
+  }
   // Slider change end here
 });
