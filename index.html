@@ -41,7 +41,7 @@
                 </div>
 
                 <!------------Desktop Menubar ------------->
-                <div class="header_menu d-none d-lg-block">
+                <div class="header_menu d-none d-xl-block">
                     <ul class="menu_list">
                         <li class="menu_iten">
                             <a href="#" class="menu_link active">Home</a>
@@ -73,13 +73,17 @@
                     </ul>
                 </div>
 
-                <!------------Desktop Menubar ------------->
-                <div class="mobile_menu d-block d-lg-none">
-                    <button class="offcanvas_toggle_btn" data-bs-target="#myOffcanvas" data-bs-toggle="offcanvas">
-                        <i class="fa-solid fa-bars"></i>
-                    </button>
+                <div class="mobile_menu_toggoler d-block d-xl-none">
+                    <button class="offcanvas_toggle_btn " data-bs-target="#myOffcanvas" data-bs-toggle="offcanvas">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                </div>
 
-                    <div class="offcanvas_menu offcanvas-start offcanvas bg-dark" id="myOffcanvas">
+                <!------------Mobile Menubar ------------->
+                <div class="mobile_menu d-block d-xl-none">
+                    
+
+                    <div class="offcanvas_menu offcanvas-start offcanvas" id="myOffcanvas">
 
                         <!-- Offcanvas header -->
                         <div class="offcanvas_header">
@@ -92,8 +96,8 @@
                         <!-- offcanvas body -->
                         <div class="offcanvas_body">
                             <ul class="mobile_menu_list">
-                                <li class="mobile_item active">
-                                    <a href="#" class="mobile_link">Home</a>
+                                <li class="mobile_item">
+                                    <a href="#" class="mobile_link active">Home</a>
                                 </li>
                                 <li class="mobile_item">
                                     <a href="#aboutSection" class="mobile_link">About me</a>
@@ -160,7 +164,11 @@
                     </a>
                 </div>
                 <div class="slider_right">
-                    <div class="slider_social">
+                    
+                    <img class="slider_img" src="./asset/images/topSlider/slider1-removebg-preview.png" alt="Salman">
+                </div>
+
+                <div class="slider_social">
 
                         <!-- Social single -->
                         <div class="Ssocial_single">
@@ -190,8 +198,6 @@
                             </a>
                         </div>
                     </div>
-                    <img class="slider_img" src="./asset/images/topSlider/slider1-removebg-preview.png" alt="Salman">
-                </div>
             </div>
         </div>
     </section>

@@ -176,6 +176,7 @@ img{
     justify-content: space-between;
     align-items: center;
     padding-top: 2rem;
+    position: relative;
 }
 .top_sub_title{
     font-size: 1.2rem;
@@ -190,7 +191,7 @@ img{
 }
 .slider_social{
     position: absolute;
-    top: 0;
+    top: 30px;
     right: 0;
     z-index: 1;
 }
@@ -254,6 +255,7 @@ img{
     justify-content: space-between;
     align-items: flex-start;
     column-gap: 2%;
+    flex-wrap: wrap;
 }
 .work_single{
     border-radius: .5rem;
@@ -310,7 +312,7 @@ img{
     width: 85%;
     margin-left: auto;
     margin-right: auto;
-    height: 550px;
+    height: 600px;
     border-radius: .5rem;
     transition: .5s;
 }
@@ -450,6 +452,7 @@ img{
     column-gap: 2%;
     row-gap: 50px;
     flex-wrap: wrap;
+    margin-top: 50px;
 }
 .skill_single{
     width: 19%;
@@ -494,6 +497,7 @@ img{
     grid-template-columns: auto auto auto;
     column-gap: 2rem;
     row-gap: 5rem;
+    margin-top: 50px;
 }
 .single_project .medium_title{
     margin-top: 10px;
@@ -630,6 +634,7 @@ img{
     column-gap: 2%;
     row-gap: 1.5rem;
     flex-wrap: wrap;
+    margin-top: 50px;
 }
 .research_single{
     width: 32%;
@@ -767,6 +772,7 @@ img{
     column-gap: 4%;
     row-gap: 2rem;
     flex-wrap: wrap;
+    margin-top: 50px;
 }
 .service_single{
     width: 48%;
@@ -971,11 +977,176 @@ img{
 .offcanvas_toggle_btn:hover{
     opacity: 1;
 }
+.offcanvas_menu{
+    background: var(--black);
+    padding: 1rem;
+    max-width: 90vw;
+}
+.offcanvas_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 1rem;
+}
+.mobile_logo{
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 0;
+}
+.offcanvas_close i{
+    font-size: 18px;
+}
+.offcanvas_close{
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, .3);
+    outline: none;
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+    line-height: 2rem;
+    border-radius: 5px;
+    transition: .3s;
+    color: var(--blue2);
+}
+.offcanvas_close:hover{
+    border-color: var(--blue2);
+    background: var(--blue2);
+    color: var(--black);
+}
+.mobile_menu_list{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding-left: 0;
+}
+.mobile_item{
+    list-style: none;
+    margin-bottom: 10px;
+}
+.mobile_link{
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 500;
+    transition: .3s;
+}
+.mobile_link:hover{
+    color: var(--blue2);
+}
+.offcanvas_footer{
+    margin-top: 1rem;
+}
+.offcanvas_social{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 15px;
+    margin-top: 10px;
+}
+.of_social_link i{
+    font-size: 14px;
+}
+.of_social_link{
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    text-decoration: none;
+    color: var(--blue2);
+    border: 1px solid rgba(255, 255, 255, .3);
+    border-radius: 5px;
+    transition: .3s;
+}
+.of_social_link:hover{
+    background: var(--blue2);
+    border-color: var(--blue2);
+    color: var(--black);
+}
 /* Responsive Design start here */
 
+/* Max width 1200px */
+@media (max-width: 1200px) {
+    .project_body{
+        grid-template-columns: auto auto;
+    }
+}
 
 /* Max width 992px */
 @media (max-width: 992px) {
-    
+    .single_project{
+        height: 240px;
+    }
+    .slider_main{
+        flex-direction: column-reverse;
+    }
+    .slider_section{
+        height: fit-content;
+    }
+    .slider_right{
+        width: 100%;
+        text-align: center;
+    }
+    .slider_left{
+        width: 100%;
+        text-align: center;
+        padding: 50px 0;
+    }
+    .slider_bottom_div{
+        justify-content: center;
+    }
+    .knowmore_btn{
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+    }
+    .work_single{
+        width: 48%;
+    }
+    .work_main{
+        row-gap: 1.5rem;
+    }
+    .aboutus_main{
+        flex-direction: column;
+        row-gap: 3rem;
+    }
+    .aboutus_main .about_righ{
+        width: 100%;
+    }
+    .aboutus_main .about_left{
+        width: 100%;
+    }
+    .education_title{
+        border-right: unset;
+    }
+    .research_single{
+        width: 48%;
+    }
+    .fun_fact_title{
+        padding-right: unset;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    .skill_single{
+        width: 32%;
+    }
+    .testimonial_title {
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    .service_inner{
+        flex-direction: column;
+        text-align: center;
+    }
+    .service_icon{
+        margin: 0 auto 2rem auto;
+    }
+    .service_single{
+        height: 400px;
+        padding: 20px;
+    }
 }
 /* Responsive Design end here */
